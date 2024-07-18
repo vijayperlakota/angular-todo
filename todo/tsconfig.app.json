@@ -1,8 +1,15 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "baseUrl": ".", // root of your "paths" below. Required if "paths" is defined
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [],
+    "paths": {
+      "@todo/types/*": ["src/app/modules/todo-app/types/*"],
+      "@todo/services/*": ["src/app/modules/todo-app/services/*"],
+      "@todo/components/*": ["src/app/modules/todo-app/components/*"],
+      "@todo/utils/*": ["src/app/modules/todo-app/utils/*"],
+    }
   },
   "files": [
     "src/main.ts",
